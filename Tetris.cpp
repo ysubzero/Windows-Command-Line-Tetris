@@ -52,7 +52,7 @@ private:
 				}
 			}
 		}
-		score += 10;
+		score += 20;
 		return true;
 	}
 
@@ -309,7 +309,7 @@ private:
 			}
 		}
 
-		if (tetromino_y > 0 && timer > 20)
+		if (tetromino_y > 0 && timer > (20 / (1.0 + (static_cast<double>(score)/100.0))))
 		{
 			tetromino_y--;
 			timer = 0;
